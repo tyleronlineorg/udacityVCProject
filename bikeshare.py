@@ -179,7 +179,11 @@ def main():
                     print("No more raw data to display.")
                     break
                showData = input("\nWould you like to see 5 more rows of raw data? Enter yes or no: ").lower()
-                  
+	       if(showData == 'no'):
+	            break
+               if(showData != 'yes'):
+	            print("I'll take that as a no")
+		    break   
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
