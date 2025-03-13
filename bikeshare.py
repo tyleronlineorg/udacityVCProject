@@ -78,10 +78,10 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    mcm = df['month'].mode()[0]
+    mcm = df['month'].mode()[0]#finds most common month, takes first if there is a tie
     print(f"Most Common Month: {monthsList[mcm - 1].title()}")
 
-    mcd = df['day_of_week'].mode()[0]
+    mcd = df['day_of_week'].mode()[0]#takes first item returned from mode()
     print(f"Most Common Day: {mcd}")
 
     mch = df['Start Time'].dt.hour.mode()[0]
